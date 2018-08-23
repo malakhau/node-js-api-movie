@@ -1,0 +1,75 @@
+{
+  "name": "node-js-api-movie",
+  "version": "0.0.1",
+  "description": "node-js-api-movie",
+  "main": "server.js",
+  "keywords": [
+    "Node.js",
+    "Node",
+    "express",
+    "template",
+    "seed",
+    "postgresql",
+    "postgres",
+    "heroku",
+    "sequelize",
+    "passport",
+    "winston",
+    "express-validator"
+  ],
+  "homepage": "https://github.com/malakhau/node-js-api-movie.git",
+  "bugs": {
+    "url": "https://github.com/malakhau/node-js-api-movie.git"
+  },
+  "author": "Luka Malakhau",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malakhau/node-js-api-movie.git"
+  },
+  "scripts": {
+    "start": "npm run apidoc && node server.js",
+    "dev": "npm run apidoc && nodemon server.js",
+    "apidoc": "apidoc -i app/routes/ -o apidoc",
+    "cluster": "node cluster.js",
+    "test": "npm run test-unit && npm run test-integration",
+    "test-unit": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/unit/*.test.js",
+    "test-integration": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/integration/*.test.js"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "compression": "1.7.2",
+    "consign": "0.1.6",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "dotenv": "6.0.0",
+    "errorhandler": "1.5.0",
+    "express": "4.16.3",
+    "express-validator": "5.2.0",
+    "helmet": "3.12.1",
+    "method-override": "2.3.10",
+    "morgan": "1.9.0",
+    "path": "0.12.7",
+    "pg": "7.4.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "response-time": "2.3.2",
+    "sequelize": "4.38.0",
+    "winston": "3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "eslint": "^5.0.1",
+    "eslint-plugin-node": "6.0.1",
+    "mocha": "5.2.0",
+    "nodemon": "1.17.5",
+    "sequelize-cli": "4.0.0",
+    "supertest": "3.1.0",
+    "chai": "^4.1.2"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "6.1.0"
+  },
+  "private": false
+}
