@@ -23,7 +23,27 @@ module.exports = {
                 return rpn.get(options).then(body => Movie.create({
                     title: req.body.title,
                     plot: body.Plot,
-                    year: body.Year
+                    year: body.Year,
+                    rated: body.Rated,
+                    released: body.Released,
+                    runtime: body.Runtime,
+                    genre: body.Genre,
+                    director: body.Director,
+                    writer: body.Writer,
+                    actors: body.Actors,
+                    plot: body.Plot,
+                    language: body.Language,
+                    awards: body.Awards,
+                    poster: body.Poster,
+                    metascore: body.Metascore,
+                    imdbRating: body.imdbRating,
+                    imdbVotes: body.imdbVotes,
+                    imdbID: body.imdbID,
+                    type: body.Type,
+                    boxOffice: body.BoxOffice,
+                    production: body.Production,
+                    website: body.Website,
+                    response: body.Response
                 }).then(movie => {
                     res.status(201).send(movie);
                 }));
